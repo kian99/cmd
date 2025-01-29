@@ -357,7 +357,7 @@ func (c *documentationCommand) linkForCommand(cmd string) string {
 func (c *documentationCommand) formatCommand(ref commandReference, title bool, commandSeq []string) string {
 	var fmtedTitle string
 	if title {
-		fmtedTitle = strings.ToUpper(strings.Join(commandSeq[1:], " "))
+		fmtedTitle = strings.ToLower(strings.Join(commandSeq, " "))
 	}
 
 	var buf bytes.Buffer
